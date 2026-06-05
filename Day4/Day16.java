@@ -16,8 +16,7 @@ public class Day16 {
                 temp /= 10;
             }
 
-            if (sum == n)
-                System.out.print(n + " ");
+            if (sum == n) System.out.print(n + " ");
         }
     }
 }
