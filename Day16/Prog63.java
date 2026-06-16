@@ -1,0 +1,32 @@
+package Day16;
+
+import java.util.Scanner;
+
+public class Prog63 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter size of array: ");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.println("Enter array elements:");
+        for(int i = 0; i < n; i++)
+            arr[i] = sc.nextInt();
+
+         System.out.print("Enter sum to find : ");
+        int s = sc.nextInt();
+
+        for(int i = 0; i < n; i++) {
+
+            for(int j = i+1; j < n; j++) {
+                if(s == arr[i]+arr[j]){
+                    System.out.println("Elements used for sum : " + arr[i]+" and "+arr[j]);
+                    return;
+                }    
+            }
+        }
+        System.out.println("No pair found");
+    }
+}
